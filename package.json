@@ -1,0 +1,35 @@
+{
+		"name": "cv",
+		"version": "1.0.0",
+		"license": "MIT",
+		"engines": {
+				"node": "~16"
+		},
+		"scripts": {
+				"clean": "del build",
+				"build": "ELEVENTY_ENV=production eleventy",
+				"start": "open http://localhost:8080 && eleventy --serve --watch",
+				"jslint": "eslint src/javascripts",
+				"deploy": "run-s build netlify",
+				"netlify": "netlify deploy --prod"
+		},
+		"devDependencies": {
+				"@11ty/eleventy": "^1.0.1",
+				"@deanc/esbuild-plugin-postcss": "^1.0.2",
+				"autoprefixer": "^10.4.7",
+				"del-cli": "^4.0.1",
+				"esbuild": "^0.14.42",
+				"esbuild-plugin-import-glob": "^0.1.1",
+				"eslint": "^7.32.0 || ^8.2.0",
+				"eslint-config-airbnb-base": "^15.0.0",
+				"eslint-plugin-import": "^2.25.2",
+				"html-minifier": "^4.0.0",
+				"luxon": "^3.0.0",
+				"netlify-cli": "^10.10.0",
+				"npm-run-all": "^4.1.5",
+				"postcss": "^8.4.14",
+				"postcss-cli": "^10.0.0",
+				"postcss-import": "^14.1.0",
+				"tailwindcss": "^3.0.24"
+		}
+}

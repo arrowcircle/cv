@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <meta name="description" content="{{ description }}" />
+  <meta name="keywords" content="{{ tags | default([]) | join(', ') }}" />
+
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="{{ author }}">
+
+  <link rel="canonical" href="{{ url }}">
+
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:type" content="article">
+
+  <meta property="og:url" content="{{ url }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ image | url }}">
+
+  <meta name="twitter:card" content="summary">
+
+  <meta name="twitter:url" content="{{ url }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ image }}">
+
+  <link rel="stylesheet" href="{% assetUrl '/assets/application.css' %}">
+</head>
+
+<body class="max-w-4xl mx-auto">
+  <main class="my-2 mx-1 md:mx-4 lg:mx-16 px-1 lg:px-2" >
+  {{ content | safe }}
+  </main>
+
+  <script src="{% assetUrl '/assets/application.js' %}" defer></script>
+</body>
+
+</html>
