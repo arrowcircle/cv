@@ -12,6 +12,7 @@ yarn start
 
 * NodeJS v16
 * yarn v1.22
+* netlify-cli installed
 
 ## Production
 
